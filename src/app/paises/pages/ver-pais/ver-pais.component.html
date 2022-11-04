@@ -1,0 +1,69 @@
+<div *ngIf="!pais; else divPais" class="alert alert-info">
+    Espere por favor...
+</div>
+
+<ng-template #divPais>
+    <div class="row">
+        <div class="col-12">
+            <h1>País: <small>{{ pais.name.common }}</small></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img class="img-thumbnail" [src]="pais.flags.png" />
+        </div>
+
+        <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Población</strong> {{ pais.population | number }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código numérico</strong> {{ pais.ccn3  }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código alpha3</strong> {{ pais.cca3  }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span class="badge bg-primary mr-1">{{ pais.translations['ara'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['bre'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ces'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['cym'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['deu'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['est'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['fin'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['fra'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['hrv'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['hun'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ita'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['jpn'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['kor'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['nld'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['per'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['pol'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['por'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['rus'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['slk'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['spa'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['swe'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['tur'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['urd'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['zho'] | json }}</span>
+        </div>
+    </div>
+
+    <pre class="mt-5">
+<!-- Pipe para transformar un JSON a string (como si lo pasaría con el JSON.stringify) -->
+{{ pais | json }}
+    </pre>
+</ng-template>

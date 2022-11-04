@@ -1,0 +1,24 @@
+<h2>Búsquedas</h2>
+<hr>
+<ul class="list-group">
+    <!-- En el routerLink defino el path de la ruta que declaré en "app-routing-module.ts" 
+         En el routerLinkActive defino la clase que quiero agregar al estar seleccionado el link
+         El routerLinkActiveOptions defino que sea exacta la ruta raíz para mostrar el "seleccionado" (clase "active")...sino, cualquier ruta a la que acceda, me activaría esta selección
+    -->
+    <li routerLink=""
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" 
+        class="list-group-item">
+        Buscar País
+    </li>
+    <li routerLink="region"
+        routerLinkActive="active" 
+        class="list-group-item">
+        Por Región
+    </li>
+    <li routerLink="capital"
+        routerLinkActive="active" 
+        class="list-group-item">
+        Por Capital
+    </li>
+</ul>

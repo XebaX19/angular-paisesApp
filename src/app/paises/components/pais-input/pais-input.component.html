@@ -1,0 +1,9 @@
+<form (ngSubmit)="buscar()" autocomplete="off">
+    <!-- El ngModel bindea el elemento del DOM "termino" con una variable en TS -->
+    <input type="text" 
+           name="terminoBusqueda"
+           class="form-control"
+           [(ngModel)]="termino"
+           (input)="teclaPresionada()"
+           [placeholder]="placeholder">
+</form>
