@@ -49,7 +49,5 @@ export class PorPaisComponent {
 
   buscarSugerido(terminoBusqueda: string) {
     this.buscar(terminoBusqueda);
-    
-
   }
 }
