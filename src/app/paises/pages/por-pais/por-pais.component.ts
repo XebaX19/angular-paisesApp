@@ -19,10 +19,12 @@ export class PorPaisComponent {
   paises: Country[] = [];
   paisesSugeridos: Country[] = [];
   mostrarSugerencias: boolean = false;
+  public isLoading: boolean = false;
 
   constructor(private paisService: PaisService) { }
 
   buscar(terminoBusqueda: string) {
+    this.isLoading = true;
     this.hayError = false;
     this.termino = terminoBusqueda;
     this.mostrarSugerencias = false;
@@ -30,9 +32,11 @@ export class PorPaisComponent {
     this.paisService.buscarPais(this.termino)
       .subscribe((paises) => {
         this.paises = [...paises];
+        this.isLoading = false;
       }, (err) => {
         this.hayError = true;
         this.paises = [];
+        this.isLoading = false;
       });
   }
 

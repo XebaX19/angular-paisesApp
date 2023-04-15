@@ -14,19 +14,23 @@ export class PorCapitalComponent {
   termino: string = '';
   hayError: boolean = false;
   paises: Country[] = [];
+  public isLoading: boolean = false;
   
   constructor(private paisService: PaisService) { }
 
   buscar(terminoBusqueda: string) {
+    this.isLoading = true;
     this.hayError = false;
     this.termino = terminoBusqueda;
 
     this.paisService.buscarPorCapital(this.termino)
       .subscribe((paises) => {
         this.paises = [...paises];
+        this.isLoading = false;
       }, (err) => {
         this.hayError = true;
         this.paises = [];
+        this.isLoading = false;
       });
   }
 

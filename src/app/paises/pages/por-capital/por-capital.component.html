@@ -15,8 +15,10 @@
 </div>
 
 <div *ngIf="hayError" class="alert alert-danger">
-    No se encontraron paises con el término "{{ termino }}"
+    No se encontraron capitales con el término "{{ termino }}"
 </div>
+
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 
 <div *ngIf="paises.length > 0" class="row">
     <div class="col">

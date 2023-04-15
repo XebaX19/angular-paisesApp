@@ -17,20 +17,24 @@ export class PorRegionComponent {
   regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
   regionActiva: string = '';
   paises: Country[] = [];
+  public isLoading: boolean = false;
 
   constructor(private paisService: PaisService) { }
 
   activarRegion(region: string) {
     if(region === this.regionActiva) { return; }
 
+    this.isLoading = true;
     this.regionActiva = region;
     this.paises = [];
 
     this.paisService.buscarPorRegion(this.regionActiva)
     .subscribe((paises) => {
       this.paises = [...paises];
+      this.isLoading = false;
     }, (err) => {
       this.paises = [];
+      this.isLoading = false;
     });
   }
 

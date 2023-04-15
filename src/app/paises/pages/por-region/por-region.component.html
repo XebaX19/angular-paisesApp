@@ -23,6 +23,8 @@
     <hr>
 </div>
 
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
 <div *ngIf="paises.length > 0" class="row">
     <div class="col">
         <!-- Para usar en el @Input:

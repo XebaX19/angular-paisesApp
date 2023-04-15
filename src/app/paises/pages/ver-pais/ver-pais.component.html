@@ -35,35 +35,35 @@
     <h3>Traducciones</h3>
     <div class="row">
         <div class="col">
-            <span class="badge bg-primary mr-1">{{ pais.translations['ara'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['bre'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['ces'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['cym'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['deu'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['est'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['fin'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['fra'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['hrv'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['hun'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['ita'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['jpn'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['kor'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['nld'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['per'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['pol'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['por'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['rus'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['slk'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['spa'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['swe'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['tur'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['urd'] | json }}</span>
-            <span class="badge bg-primary mr-1">{{ pais.translations['zho'] | json }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ara'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['bre'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ces'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['cym'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['deu'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['est'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['fin'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['fra'] .common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['hrv'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['hun'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ita'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['jpn'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['kor'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['nld'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['per'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['pol'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['por'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['rus'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['slk'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['spa'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['swe'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['tur'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['urd'].common }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['zho'].common }}</span>
         </div>
     </div>
 
     <pre class="mt-5">
-<!-- Pipe para transformar un JSON a string (como si lo pasaría con el JSON.stringify) -->
-{{ pais | json }}
+    <!-- Pipe para transformar un JSON a string (como si lo pasaría con el JSON.stringify) -->
+    {{ pais | json }}
     </pre>
 </ng-template>
